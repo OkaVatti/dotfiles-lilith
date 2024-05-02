@@ -1,0 +1,28 @@
+# options are bsp, stack, & float
+yabai -m config layout bsp
+
+yabai -m window_placement second_child
+
+# padding
+yabai -m config top_padding 39
+yabai -m config bottom_padding 14
+yabai -m config left_padding 14
+yabai -m config right_padding 14
+yabai -m config window_gap 14
+
+# mouse settings
+
+yabai -m config mouse_follows_focus on
+
+yabai -m config mouse_modifier alt
+# lmb + drag
+yabai -m config mouse_action1 move
+# rmb + drag
+yabai -m config mouse_action2 resize
+
+yabai -m mouse_drop_action swap
+
+# list of apps yabai doesn't manage
+yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^Calculator$" manage=off
+yabai -m rule --add app="^(Safari|Finder|Notes|Music)$" manage=off

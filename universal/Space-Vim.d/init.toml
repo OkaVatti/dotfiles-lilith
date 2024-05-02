@@ -1,0 +1,163 @@
+#=============================================================================
+# dark_powered.toml --- dark powered configuration example for SpaceVim
+# Copyright (c) 2016-2023 Wang Shidong & Contributors
+# Author: Wang Shidong < wsdjeg@outlook.com >
+# URL: https://spacevim.org
+# License: GPLv3
+#=============================================================================
+
+# All SpaceVim option below [option] section
+[options]
+    # set spacevim theme. by default colorscheme layer is not loaded,
+    # if you want to use more colorscheme, please load the colorscheme
+    # layer
+    colorscheme = "gruvbox"
+    colorscheme_bg = "dark"
+    # Disable guicolors in basic mode, many terminal do not support 24bit
+    # true colors
+    enable_guicolors = true
+    guifont = "PT Mono:h11"
+    # Disable statusline separator, if you want to use other value, please
+    # install nerd fonts
+    statusline_separator = "arrow"
+    statusline_iseparator = "arrow"
+    buffer_index_type = 4
+    enable_tabline_filetype_icon = true
+    enable_statusline_mode = false
+    filemanager = "nerdtree"
+    filetree_direction = "left"
+
+
+# Enable autocomplete layer
+[[layers]]
+name = 'autocomplete'
+auto_completion_return_key_behavior = "complete"
+auto_completion_tab_key_behavior = "smart"
+
+[[layers]]
+name = 'shell'
+default_position = 'top'
+default_height = 30
+
+[[layers]]
+  name = "lang#javascript"
+  auto_fix = true
+  format_on_save = true
+
+#
+# Themes
+#
+
+[[custom_plugins]]
+  # tokyonight theme
+    repo = "ghifarit53/tokyonight-vim"
+    merged = false # disable merge because they told me to
+
+[[custom_plugins]]
+  # darkness theme (monochromatic B/W)
+    repo = "jorengarenar/vim-darkness"
+    merged = false
+
+[[custom_plugins]]
+  # Srcry theme (wizard beer)
+    repo = "srcery-colors/srcery-vim"
+    merged = false
+
+[[custom_plugins]]
+  # Dracula theme (dark)
+    repo = "dracula/vim"
+    merged = false
+
+[[custom_plugins]]
+  # Horizon colorscheme
+    repo = "ntk148v/vim-horizon"
+    merged = false
+
+[[custom_plugins]]
+
+
+#
+# Languages
+#
+
+[[custom_plugins]]
+  # Rust Language Support
+    repo = "rust-lang/rust.vim"
+    merged = false
+
+[[custom_plugins]]
+  # Crystal Lang Support
+    repo = "rhysd/vim-crystal"
+    merged = false
+
+[[custom_plugins]]
+  # Haskell Lank Support
+    repo = "neovimhaskell/haskell-vim"
+    merged = false
+[[custom_plugins]]
+  # Emmet for HTML
+    repo = "mattn/emmet-vim"
+    merged = false
+
+[[custom_plugins]]
+  # Markdown Support
+    repo = "plasticboy/vim-markdown"
+    merged = false
+
+#
+# QOL Plugins
+#
+
+[[custom_plugins]]
+  # TabbyML (Co-Pilot Alternative)
+    repo = "TabbyML/vim-tabby"
+    merged = false
+
+[[custom_plugins]]
+  # nvim-treesitter
+    repo = "nvim-treesitter/nvim-treesitter"
+    merged = false
+
+[[custom_plugins]]
+  # CSS Color
+    repo = "ap/vim-css-color"
+    merged = false
+
+[[custom_plugins]]
+  # vim-smooth-scroll
+    repo = "terryma/vim-smooth-scroll"
+    merged = false
+
+[[custom_plugins]]
+  # vim-airline
+    repo = "vim-airline/vim-airline"
+    merged = false
+
+[[custom_plugins]]
+  # vim-airline-themes
+    repo = "vim-airline/vim-airline-themes"
+    merged = false
+
+[[custom_plugins]]
+  # minimap
+    repo = "wfxr/minimap.vim"
+    merged = false
+
+[[custom_plugins]]
+  # code-minimap
+    repo = "wfxr/code-minimap"
+    merged = false
+
+[[custom_plugins]]
+  # rainbow parentheses
+    repo = "junegunn/rainbow_parentheses.vim"
+    merged = false
+
+[[custom_plugins]]
+  # ggandor/lightspeed.nvim
+    repo = "ggandor/lightspeed.nvim"
+    merged = false
+
+
+
+

@@ -1,0 +1,88 @@
+#
+#
+# ███████╗██╗  ██╗███████╗████████╗ ██████╗██╗  ██╗██╗   ██╗██████╗  █████╗ ██████╗ 
+# ██╔════╝██║ ██╔╝██╔════╝╚══██╔══╝██╔════╝██║  ██║╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+# ███████╗█████╔╝ █████╗     ██║   ██║     ███████║ ╚████╔╝ ██████╔╝███████║██████╔╝
+# ╚════██║██╔═██╗ ██╔══╝     ██║   ██║     ██╔══██║  ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+# ███████║██║  ██╗███████╗   ██║   ╚██████╗██║  ██║   ██║   ██████╔╝██║  ██║██║  ██║
+# ╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝    ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+#
+#
+
+source "$CONFIG_DIR/colors.sh"  # Load all defined colors
+source "$CONFIG_DIR/icons.sh"   # Load all defined icons
+
+ITEM_DIR="$CONFIG_DIR/items"      # Place where items are configured and stored
+PLUGIN_DIR="$CONFIG_DIR/plugins"  # Place where plugins are configured and stored
+
+FONT="PT Mono"
+
+bar=(
+  height=36
+  blur_radius=14
+  position=top
+  sticky=on
+  padding_left=6
+  padding_right=6
+  color=$TRANSPARENT      #0x15355a85
+  corner_radius=8
+  y_offset=-6
+  margin=10
+)
+sketchybar --bar "${bar[@]}"
+
+default=(
+  updates=when_shown
+  #icon.font="Hack Nerd Font:Bold:17.0"
+  icon.font="$FONT:bold:14.0"
+  icon.color=$ICON_COLOR
+  label.font="$FONT:Bold:14.0"
+  label.color=$LABEL_COLOR
+  padding_left=5
+  padding_right=5
+  label.padding_left=4
+  label.padding_right=4
+  label.font="$FONT:Semibold:13.0"
+  label.color=$LABEL_COLOR
+  icon.padding_left=4
+  icon.padding_right=4
+  background.corner_radius=8
+  background.border_width=2
+  popup.background.border_width=2
+  popup.background.corner_radius=9
+  popup.background.color=$PRIMARY_1
+  popup.background.border_color=$PRIMARY_1
+  popup.blur_radius=20
+  popup.background.shadow.drawing=on
+
+)
+
+sketchybar --default "${defaults[@]}"
+
+# Left
+source "$ITEM_DIR/apple.sh"
+source "$ITEM_DIR/space.sh"
+source "$ITEM_DIR/terminal.sh"
+
+# Right
+source "$ITEM_DIR/power.sh"
+source "$ITEM_DIR/time.sh"
+source "$ITEM_DIR/wifi.sh"
+source "$ITEM_DIR/net.sh"
+source "$ITEM_DIR/battery.sh"
+source "$ITEM_DIR/volume.sh"
+source "$ITEM_DIR/brew.sh"
+
+sketchybar --hotload true
+sketchybar --update
+
+echo ""
+echo ""
+echo ""
+echo "sketchybar configuration has been loaded..."
+echo "Lilith Injection Complete"
+echo ""
+echo | cat "$CONFIG_DIR/sbASCII.txt"
+echo ""
+echo ""
+echo ""
